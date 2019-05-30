@@ -19,9 +19,9 @@ photo = PhotoImage(file='play (1).png')
 pause = PhotoImage(file='stop.png')
 
 lit = {
-    1: 'Say You Won t Let Go.mp3', 2: 'In the Jungle the mighty jungle.mp3'
-
-    }
+    1: 'Say You Won t Let Go.mp3',
+    2: 'In the Jungle the mighty jungle.mp3'
+     }
 lost = ''
 print(lit)
 
@@ -57,10 +57,9 @@ scale.set(50)
 scale.pack(padx=5, pady=5)
 
 QUIT = Button(text="QUIT", fg="red", command=window.destroy)
-QUIT.pack(padx=25, pady=25)
+QUIT.pack()
 
-window.mainloop()
-
+window.mainloop(padx=5, pady=5)
 
 
 
