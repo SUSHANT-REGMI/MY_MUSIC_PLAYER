@@ -18,32 +18,34 @@ entry_field1.pack()
 photo = PhotoImage(file='play (1).png')
 pause = PhotoImage(file='stop.png')
 
-list = {
-    'Say You Won t Let Go.mp3': 1,'In the Jungle the mighty jungle.mp3':2
+lit = {
+    1: 'Say You Won t Let Go.mp3', 2: 'In the Jungle the mighty jungle.mp3'
 
-        }
+    }
 lost = ''
-print(list)
-print("which one?")
-this_one = int(input(''))
-for i,j in list:
+print(lit)
+
+this_one = int(input('"which one?"'))
+for j, i in lit.items():
     if j == this_one:
-      lost = i
+        lost = i
+
 
 def pause_btn():
- mixer.music.stop()
+    mixer.music.stop()
+
 
 def scale_btn(val):
- volume = int(val)/100
- mixer.music.set_volume(volume)
-
+    volume = int(val)/100
+    mixer.music.set_volume(volume)
 
 
 def play_btn():
     mixer.music.load(lost)
     mixer.music.play()
 
-    # Buttons
+
+# Buttons
 button1 = Button(window, image=photo, command=play_btn)
 button1.pack(padx=5, pady=5)
 button2 = Button(window, image=pause, command=pause_btn)
@@ -58,6 +60,9 @@ QUIT = Button(text="QUIT", fg="red", command=window.destroy)
 QUIT.pack(padx=25, pady=25)
 
 window.mainloop()
+
+
+
 
 
 
